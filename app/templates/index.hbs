@@ -1,0 +1,23 @@
+<LinkTo @route="my-form.new">Le lien vers le formulaire par un LinkTo</LinkTo>
+
+<table class="ui table">
+  <tr>
+    <th>Name</th>
+    <th>Desc</th>
+    <th>Actions</th>
+  </tr>
+  {{#each this.model as |item|}}
+  <tr>
+    <td>{{item.name}}</td>
+    <td>{{item.desc}}</td>
+    <td>
+      <LinkTo @route="my-form.edit" @model={{item}}>Edit</LinkTo>
+      <br>
+      <LinkTo @route="my-form.edit" @model={{item.id}}>Edit with id</LinkTo>
+      <br>
+      <button class="ui primary mini button" type="button" {{on "click" (fn this.delete item)}}>
+        Delete</button>
+    </td>
+  </tr>
+  {{/each}}
+</table>

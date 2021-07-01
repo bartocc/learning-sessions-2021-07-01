@@ -1,0 +1,7 @@
+{
+  "template": "ember",
+  "container": {
+    "node": "12",
+    "port": 4200
+  }
+}

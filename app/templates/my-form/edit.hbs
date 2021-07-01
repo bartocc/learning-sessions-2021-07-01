@@ -1,0 +1,19 @@
+Vous voici dans le formulaire
+<div>
+  Name: {{@model.name}}
+</div>
+<div>
+  Desc: {{@model.desc}}
+</div>
+
+<form {{on "submit" this.submitForm}}>
+
+  <label for="foo">Premier input</label>
+  <Input type="text" id="foo" @value={{@model.name}} />
+
+  <label for="bar">Deuxième input</label>
+  <Input type="text" id="bar" @value={{@model.desc}} />
+
+  <button> Retour à l'accueil </button>
+
+</form>
